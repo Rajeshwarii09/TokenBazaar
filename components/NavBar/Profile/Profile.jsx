@@ -4,6 +4,8 @@ import { FaUserAlt, FaRegImage, FaUserEdit } from "react-icons/fa";
 import { MdHelpCenter } from "react-icons/md";
 import { TbDownloadOff, TbDownload } from "react-icons/tb";
 import Link from "next/link";
+import { useRouter } from "next/router";
+
 
 //INTERNAL IMPORT
 import Style from "./Profile.module.css";
@@ -23,7 +25,7 @@ const Profile = () => {
 
         <div className={Style.profile_account_info}>
           <p>Shoaib Bhai</p>
-          <small>X038499382920203...</small>
+          <small>currentAccount.slice(0,16)..</small>
         </div>
       </div>
 
@@ -32,19 +34,19 @@ const Profile = () => {
           <div className={Style.profile_menu_one_item}>
             <FaUserAlt />
             <p>
-              <Link href={{ pathname: "/myprofile" }}>My Profile</Link>
+              <Link href={{ pathname: "/author" }}>My Profile</Link>
             </p>
           </div>
           <div className={Style.profile_menu_one_item}>
             <FaRegImage />
             <p>
-              <Link href={{ pathname: "/my-items" }}>My Items</Link>
+              <Link href={{ pathname: "/author" }}>My Items</Link>
             </p>
           </div>
           <div className={Style.profile_menu_one_item}>
             <FaUserEdit />
             <p>
-              <Link href={{ pathname: "/edit-profile" }}>Edit Profile</Link>
+              <Link href={{ pathname: "/account" }}>Edit Profile</Link>
             </p>
           </div>
         </div>
@@ -53,13 +55,13 @@ const Profile = () => {
           <div className={Style.profile_menu_one_item}>
             <MdHelpCenter />
             <p>
-              <Link href={{ pathname: "/help" }}>Help</Link>
+              <Link href={{ pathname: "/contactus" }}>Contact Us</Link>
             </p>
           </div>
           <div className={Style.profile_menu_one_item}>
             <TbDownload />
             <p>
-              <Link href={{ pathname: "/disconnet" }}>Disconnet</Link>
+              <Link href={{ pathname: "/aboutus" }}>About Us</Link>
             </p>
           </div>
         </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+import { ZealMarketContext } from "../../Context/ZealMarketContext";
+
 //INTERNAL IMPORT
 import Style from "./HeroSection.module.css";
 import { Button } from "../componentsindex";
